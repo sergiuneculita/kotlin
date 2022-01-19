@@ -5,11 +5,7 @@ fun main() {
     //println(text1) //control first part
      val text2 = text.takeLast(12)
     println(decodeText1(text1) + decodeText2(text2))
-    val textcoplet =( decodeText1(text1) + decodeText2(text2))
-    println(textcoplet)
-    //shift('d', 'a')
-   // println(shift('d','a' ))
-    println( textcoplet.map { char -> char +1  })
+
 }
 
 fun decodeText1(text1 : String): String {
