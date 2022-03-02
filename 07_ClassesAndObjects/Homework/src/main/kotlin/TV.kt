@@ -3,19 +3,20 @@ class TV(val brand: String, val model: String, val diagonal: Int) {
         getRandomChannels()
     }
 
-    private var isOn = false
+    var isOn = false
+        get() = field
 
-    private fun onOrOff() = if (isOn) {
-        isOn = true
-        println("On")
-    } else {
-        println("Off")
+     fun switchOnOff(isTvOn: Boolean) {
+        isOn = isTvOn
+        if (isOn) println("Switched On")
+        else println("Switched Off")
     }
 
-    internal val chanelList = getRandomChannels().toMap()
+    private val chanelList = getRandomChannels().toMap()
+
     var channelActive = chanelList.entries.first().toPair()
 
-    val chanelSwitch: Pair<Int, String>
+    private val currentChannel: Pair<Int, String>
         get() {
             println("Please enter channel")
             return chanelSwitch1()
@@ -24,21 +25,22 @@ class TV(val brand: String, val model: String, val diagonal: Int) {
     private fun chanelSwitch1(chanel: Int? = readLine()?.toIntOrNull()): Pair<Int, String> {
         var saveChannel = channelActive
         if (isOn) {
-            onOrOff()
-            chanelSwitch
+            switchOnOff(isOn)
+            currentChannel
         } else if (chanel != 0) {
-            if (chanel!! <= chanelList.size) {
-                chanelList.entries.forEach { entry ->
-                    if (entry.key == chanel) {
-                        channelActive = entry.toPair()
-                        println("you switched channel ${channelActive.first}-${channelActive.second}")
-                        saveChannel = channelActive
+            if (chanel != null)
+                if (chanel <= chanelList.size) {
+                    chanelList.entries.forEach { entry ->
+                        if (entry.key == chanel) {
+                            channelActive = entry.toPair()
+                            println("you switched channel ${channelActive.first}-${channelActive.second}")
+                            saveChannel = channelActive
+                        }
                     }
+                } else {
+                    println("Chanel Don't found Please enter channel from your list")
+                    currentChannel
                 }
-            } else {
-                println("Chanel Don't found Please enter channel from your list")
-                chanelSwitch
-            }
         }
 
         return saveChannel
@@ -47,18 +49,18 @@ class TV(val brand: String, val model: String, val diagonal: Int) {
     fun channelUpDown(direction: Boolean) {
         val currentChannel = channelActive.first
         if (isOn) {
-            onOrOff()
+            switchOnOff(isOn)
             channelUpDown(direction)
         } else {
             val upDown = if (direction) 1 else -1
-            (if (currentChannel + upDown > chanelList.size) 1
+           val nextChannel = if (currentChannel + upDown > chanelList.size) 1
             else if (currentChannel + upDown < 1) chanelList.size
-            else currentChannel + upDown).also {
-                chanelSwitch1(it)
-            }
-
+            else currentChannel + upDown
+            chanelSwitch1(nextChannel)
         }
+
     }
+
 
     var currentVolume = 0
     fun volumeUp(volume: Int) {
@@ -78,6 +80,7 @@ class TV(val brand: String, val model: String, val diagonal: Int) {
     }
 
     companion object {
-        internal const val maxVolume = 100
+        const val maxVolume = 100
+
     }
 }

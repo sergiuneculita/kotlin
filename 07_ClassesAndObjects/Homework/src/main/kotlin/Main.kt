@@ -7,12 +7,10 @@ fun main() {
     fun tvInfo(TV: TV) {
         println("The TV name is: ${TV.brand} ${TV.model}")
         println("Diagonal: ${TV.diagonal}")
-        println("Channel list is: ${TV.chanelList}")
         println("Active channel is: ${TV.channelActive}")
         println("The TV volume is: ${TV.currentVolume}")
     }
     tvInfo(samsung)
-    samsung.chanelSwitch
     println(samsung.channelActive)
     println("Switch up")
     samsung.channelUpDown(upChannel)
@@ -32,7 +30,10 @@ fun main() {
     lg.channelUpDown(upChannel)
     lg.channelUpDown(upChannel)
     lg.channelUpDown(upChannel)
+    lg.channelUpDown(upChannel)
+    lg.channelUpDown(upChannel)
     println("current Channel ist ${lg.channelActive}")
+
 }
 
 

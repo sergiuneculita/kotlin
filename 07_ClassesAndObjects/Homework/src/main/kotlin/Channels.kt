@@ -23,7 +23,7 @@ fun getRandomChannels(): Map<Int, String> {
     val newMap = mutableMapOf<Int, String>()
     for (i in 0..channelsSize) {
         val pair = Pair(key[i], mixValue[i])
-        pair.second.also { newMap[pair.first] = it }
+        newMap[pair.first] = pair.second
     }
     return newMap
 }
