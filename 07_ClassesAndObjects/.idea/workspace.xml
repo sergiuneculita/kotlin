@@ -5,9 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2da35bf3-841e-43a2-97e1-07cf378186fe" name="Changes" comment="I did my homework number 7.8&#10;I tried the program with examples">
-      <change beforePath="$PROJECT_DIR$/Homework/src/main/kotlin/Channels.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/kotlin/Channels.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework/src/main/kotlin/TV.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/kotlin/TV.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/src/main/kotlin/Animals.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/src/main/kotlin/Bird.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/src/main/kotlin/Dog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/src/main/kotlin/Fish.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08_OOP1/Homework8/src/main/kotlin/NatureReserve.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/build.gradle copy.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradle copy/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradle copy/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradle.properties copy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradlew copy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/gradlew.bat copy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/settings.gradle copy.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/src copy/main/kotlin/Animals.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/src copy/main/kotlin/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework8/src/main/kotlin/Animals.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../05_ConditionalExpressions_ Loops/Homework2/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08_OOP1/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
