@@ -1,13 +1,22 @@
 fun main() {
 
-    val visaCard = CreditCard(1000)
-val dbDebitCard = DebitCard()
-  /*visaCard.getInfoAvailableFounds()
-   visaCard.addFunds()
+val deutcheBankCreditKArte = DBCreditCard(20000)
+    val deutcheBankDebitKarte = DBDebitCard(0.03,0.002)
+    deutcheBankCreditKArte.pay()
+    deutcheBankCreditKArte.pay()
+    deutcheBankCreditKArte.addFunds()
+    deutcheBankCreditKArte.addFunds()
+    deutcheBankDebitKarte.pay()
+    deutcheBankDebitKarte.addFunds()
+    deutcheBankDebitKarte.pay()
 
-    visaCard.pay()*/
-    dbDebitCard.getInfoAvailableFounds()
-    dbDebitCard.addFunds()
-    dbDebitCard.pay()
+
+
+
+
+
+
+
+
 
 }
