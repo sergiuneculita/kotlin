@@ -1,44 +1,45 @@
 object Converters {
-    private val converters = listOf(EuroConverter(), DollarConverter())
-    private lateinit var thisConverter: CurrencyConverter
+    private val converters = listOf( DollarConverter(),EuroConverter())
 
     fun get(currencyCode: String): CurrencyConverter {
-
+        lateinit var newConverter: CurrencyConverter
         converters.forEach {
-            when (currencyCode.uppercase()) {
-                it.currencyCode -> {
-                    thisConverter = it
-                    return thisConverter
-                }
-                else -> thisConverter = object : CurrencyConverter {
-                    override val currencyCode: String = currencyCode.uppercase()
-                    override fun convertToRub() {
-                        val resultCurrency: Double
-                        println("How many rubles you want to exchange to ${this.currencyCode}")
-                        val nRub = readLine()?.toIntOrNull()
-                        when {
-                            nRub != null -> when {
-                                nRub > 0 -> {
-                                    resultCurrency = (nRub % (getExchangeRate(this.currencyCode)))
-                                    println("$nRub Rub = $resultCurrency ${this.currencyCode}")
-                                }
-                                else -> {
-                                    println("You entered a negative amount")
-                                    convertToRub()
-                                }
-                            }
-                            else -> {
-                                println("You must enter numbers")
-                                convertToRub()
-                            }
-                        }
-
-                    }
-
-                }
+          newConverter = if (it.currencyCode == currencyCode.uppercase()) return it
+            else createAbstractObject(currencyCode)
+        }
+        return newConverter
+    }
+    private fun createAbstractObject(currencyCode: String): CurrencyConverter {
+        return object : CurrencyConverter {
+            override val currencyCode: String = currencyCode.uppercase()
+            override fun convertToRub() {
+                convertToRubNewCurrency(this.currencyCode)
             }
         }
-        return thisConverter
+    }
+
+   private fun convertToRubNewCurrency(newCurrencyCode: String) {
+        println("How many rubles you want to exchange to $newCurrencyCode")
+        val nRub = readLine()?.toIntOrNull()
+        if (nRub != null) {
+            getResultNewCurrency(nRub, newCurrencyCode)
+        } else {
+            println("You must enter numbers")
+            convertToRubNewCurrency(newCurrencyCode)
+        }
+
+    }
+
+
+    private fun getResultNewCurrency(nRub: Int, newCurrencyCode: String) {
+        val resultCurrency: Double
+        if (nRub > 0) {
+            resultCurrency = (nRub / (getExchangeRate(newCurrencyCode)))
+            println("$nRub Rub = $resultCurrency $newCurrencyCode")
+        } else {
+            println("You entered a negative amount")
+            convertToRubNewCurrency(newCurrencyCode)
+        }
     }
 
     private fun getExchangeRate(currency: String): Double {
@@ -51,5 +52,7 @@ object Converters {
 
     }
 
+
 }
+
 

@@ -1,5 +1,5 @@
 interface CurrencyConverter {
-    val currencyCode : String
+    val currencyCode: String
     fun convertToRub()
 
 }
