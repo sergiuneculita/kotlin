@@ -29,7 +29,6 @@ abstract class AbstractWeapon(
             is Firetype.SingleShot -> 1
             is Firetype.AutomaticFire -> fireType.fireSize
         }
-        println(" get $ammoCount Ammo")
             for (i in 0 until ammoCount) {
                 ammoList.add(weaponMagazine.pop() ?: break)
 

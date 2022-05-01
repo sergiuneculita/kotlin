@@ -5,14 +5,10 @@ open class Stack<T> {
 
     }
     fun pop ():T? {
-      if (list.size > 0)
-            list.remove(list.last())
-
-        return list.last()
-
+        return if(isEmpty()) {null} else {list.removeLast()}
     }
    fun isEmpty():Boolean{
-       return list.size < 0
+       return list.size <= 0
     }
 
     override fun toString(): String {
