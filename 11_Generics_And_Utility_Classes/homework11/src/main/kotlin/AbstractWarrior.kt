@@ -9,13 +9,12 @@ abstract class AbstractWarrior : Warrior {
 
 
     override fun attack(enemy: Warrior) {
-        val warrior = enemy
         if (weapon.isMagazineEmpty) {
             weapon.recharge()
         } else {
             weapon.getAmmoForShot().forEach {
-                if (accuracy.probability() && !warrior.chanceNotGetDamage.probability()) {
-                        warrior.takeDamage(it.takingCurrentDamage())
+                if (accuracy.probability() && !enemy.chanceNotGetDamage.probability()) {
+                        enemy.takeDamage(it.takingCurrentDamage())
 
                 }
             }
