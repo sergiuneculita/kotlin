@@ -15,7 +15,7 @@ abstract class AbstractWarrior : Warrior {
         } else {
             weapon.getAmmoForShot().forEach {
                 if (accuracy.probability() && !warrior.chanceNotGetDamage.probability()) {
-                        warrior.takeDamage(it.damage)
+                        warrior.takeDamage(it.takingCurrentDamage())
 
                 }
             }
