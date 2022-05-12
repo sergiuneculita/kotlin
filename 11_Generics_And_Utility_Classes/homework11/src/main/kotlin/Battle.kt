@@ -7,11 +7,11 @@ class Battle(
     var secondTeam: MutableList<AbstractWarrior>
 ) {
 
-    var endBattle = false
-    var state: BattleState = BattleState.Progress
-    var winningTeam = nameForFirstTeam
+   private var endBattle = false
+  private  var state: BattleState = BattleState.Progress
+   private var winningTeam = nameForFirstTeam
 
-    fun getStatusOfBattle() {
+  private  fun getStatusOfBattle() {
         when {
             firstTeam.size > 0 && secondTeam.size > 0 -> {
                 endBattle = false
@@ -34,7 +34,7 @@ class Battle(
         }
     }
 
-    fun checkBattleState() {
+   private fun checkBattleState() {
         when (state) {
             is BattleState.Progress -> {
                 println("Battle continue")
@@ -72,17 +72,17 @@ class Battle(
 
     }
 
-    fun attack(whoAttacks: AbstractWarrior, whoIsAttacked: AbstractWarrior) {
+  private  fun attack(whoAttacks: AbstractWarrior, whoIsAttacked: AbstractWarrior) {
         return whoAttacks.attack(whoIsAttacked)
     }
 
-    fun getRandomWarrior(team: MutableList<AbstractWarrior>): AbstractWarrior {
+   private fun getRandomWarrior(team: MutableList<AbstractWarrior>): AbstractWarrior {
         return team[Random.nextInt(0, team.size)]
 
 
     }     //Cleaning the list of Killed
 
-    fun removeKilledWarrior() {
+  private  fun removeKilledWarrior() {
         firstTeam
             .filter { it.currentHealthPoint <= 0 }
             .forEach { firstTeam.remove(it) }

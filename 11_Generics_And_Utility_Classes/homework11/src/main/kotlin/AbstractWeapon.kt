@@ -11,7 +11,7 @@ abstract class AbstractWeapon(
     abstract fun createAmmoForWeapon(): Ammo
 
 
-    open fun recharge() {
+     fun recharge() {
         val newMagazine: Stack<Ammo> = Stack()
         for (i in 0 until maxAmmoMagazine) newMagazine.push(createAmmoForWeapon())
         weaponMagazine = newMagazine

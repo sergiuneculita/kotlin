@@ -2,7 +2,7 @@ abstract class AbstractWarrior : Warrior {
     abstract val maxHealth: Int
     abstract val accuracy: Int
     abstract val weapon: AbstractWeapon
-    abstract var currentHealthPoint: Int
+   abstract var currentHealthPoint: Int
     abstract override val chanceNotGetDamage: Int
     abstract override var isKilled: Boolean
 
