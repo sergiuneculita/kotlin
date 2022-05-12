@@ -1,19 +1,30 @@
 sealed class BattleState {
-   class Progress : BattleState() {
-      fun info(firstTeam: MutableList<AbstractWarrior>, secondTeam: MutableList<AbstractWarrior>){
-         println("Sum of first team health ${firstTeam.sumOf { it.currentHealthPoint}},\n" +
-                 " Sum of second team health ${secondTeam.sumOf { it.currentHealthPoint }}")
-         println("Sum of warriors in the first team - ${firstTeam.size},\n" +
-                 " Sum of warriors in the second team - ${secondTeam.size}")
-         println("in first team are :\n Soldier = ${firstTeam.count{ it is Soldier}},\n" +
-                 " Captain = ${firstTeam.count{ it is Captain}},\n General = ${firstTeam.count{ it is General}}")
-         println("in second team are:\n Soldier = ${secondTeam.count{ it is Soldier}},\n" +
-                 " Captain = ${secondTeam.count{ it is Captain}},\n General = ${secondTeam.count{ it is General}}")
-      }
-   }
-   class WonFirstTeam: BattleState()
-   class  WonSecondTeam: BattleState()
-   class Draw: BattleState()
+    object Progress : BattleState() {
+        fun info(
+            firstTeam: MutableList<AbstractWarrior>,
+            nameOfFirstTeam: String,
+            secondTeam: MutableList<AbstractWarrior>,
+            nameOfSecondTeam: String
+        ) {
+            println(
+                "Sum of $nameOfFirstTeam team health ${firstTeam.sumOf { it.currentHealthPoint }},\n" +
+                        " Sum of $nameOfSecondTeam team health ${secondTeam.sumOf { it.currentHealthPoint }}"
+            )
+            println(
+                "Sum of warriors in the $nameOfFirstTeam team - ${firstTeam.size},\n" +
+                        " Sum of warriors in the $nameOfSecondTeam team - ${secondTeam.size}"
+            )
+            println("in $nameOfFirstTeam team are :\n Soldier = ${firstTeam.count { it is Soldier }},\n" +
+                    " Captain = ${firstTeam.count { it is Captain }},\n General = ${firstTeam.count { it is General }}"
+            )
+            println("in $nameOfSecondTeam team are:\n Soldier = ${secondTeam.count { it is Soldier }},\n" +
+                    " Captain = ${secondTeam.count { it is Captain }},\n General = ${secondTeam.count { it is General }}"
+            )
+        }
+    }
+
+    data class Success(val team: MutableList<AbstractWarrior>) : BattleState()
+    object Draw : BattleState()
 
 
 }

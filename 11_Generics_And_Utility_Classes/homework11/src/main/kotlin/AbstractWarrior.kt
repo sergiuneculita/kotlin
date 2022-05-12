@@ -3,29 +3,32 @@ abstract class AbstractWarrior : Warrior {
     abstract val accuracy: Int
     abstract val weapon: AbstractWeapon
     abstract var currentHealthPoint: Int
-    override val chanceNotGetDamage: Int = 0
-
-    override var isKilled: Boolean = false
+    abstract override val chanceNotGetDamage: Int
+    abstract override var isKilled: Boolean
 
 
     override fun attack(enemy: Warrior) {
+        val currentDamage = weapon.createAmmoForWeapon().takingCurrentDamage()
+        val ammoForShot = weapon.getAmmoForShot()
         if (weapon.isMagazineEmpty) {
             weapon.recharge()
         } else {
-            weapon.getAmmoForShot().forEach {
-                if (accuracy.probability() && !enemy.chanceNotGetDamage.probability()) {
-                        enemy.takeDamage(it.takingCurrentDamage())
-
+            ammoForShot.forEach { _ ->
+                val probabilityDamage = accuracy.probability() && !enemy.chanceNotGetDamage.probability()
+                if (probabilityDamage) {
+                    enemy.takeDamage(currentDamage)
                 }
+
             }
         }
-
     }
 
     override fun takeDamage(quantityDamage: Int) {
         if (currentHealthPoint > quantityDamage) currentHealthPoint -= quantityDamage
-        else {currentHealthPoint = 0
-        isKilled = true}
+        else {
+            currentHealthPoint = 0
+            isKilled = true
+        }
     }
 
 

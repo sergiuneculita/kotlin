@@ -1,18 +1,20 @@
 enum class Ammo(
-   name: String,
-  val damage: Int,
-   val criticalChanceDamage: Int,
-    val criticalDamageRatio: Double
+
+    var damage: Int,
+    val criticalChanceDamage: Int,
+    val criticalDamageRatio: Int
 ) {
-    pistolCartrige("pistol_ammo",20, 12, 1.2),
-    sniperCartrige("sniper_ammo",85, 90, 1.4),
-    assaultCartrige("assault_ammo",70, 40, 1.5);
+    pistolAmmo(12, 30, 3),
+
+    //sniperAmmo("sniper_ammo",35, 80, 6),
+    assaultAmmo(25, 40, 4);
 
 
     fun takingCurrentDamage(): Int {
         return if (criticalChanceDamage.probability())
-            damage * criticalDamageRatio.toInt()
+            damage * criticalDamageRatio
         else damage
+
     }
 
 }

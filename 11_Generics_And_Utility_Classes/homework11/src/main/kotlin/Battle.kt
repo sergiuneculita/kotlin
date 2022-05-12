@@ -1,58 +1,98 @@
 import kotlin.random.Random
-import kotlin.random.nextInt
 
-class Battle {
+class Battle(
+    val nameForFirstTeam: String,
+    var firstTeam: MutableList<AbstractWarrior>,
+    val nameForSecondTeam: String,
+    var secondTeam: MutableList<AbstractWarrior>
+) {
 
     var endBattle = false
-    fun getStatusOfBattle(echipa1:MutableList<AbstractWarrior>, echipa2:MutableList<AbstractWarrior>) {
-        val firstTeam = echipa1
-        val secondTeam = echipa2
+    var state: BattleState = BattleState.Progress
+    var winningTeam = nameForFirstTeam
+
+    fun getStatusOfBattle() {
         when {
-            firstTeam.isNotEmpty() && secondTeam.isNotEmpty() -> {
-                BattleState.Progress()
+            firstTeam.size > 0 && secondTeam.size > 0 -> {
                 endBattle = false
 
             }
-            firstTeam.isEmpty() && secondTeam.isEmpty() -> {
+            firstTeam.size == 0 && secondTeam.size == 0 -> {
                 endBattle = true
-                BattleState.Draw()
-
+                state = BattleState.Draw
             }
-            firstTeam.isEmpty() -> {
+            firstTeam.size == 0 -> {
                 endBattle = true
-                BattleState.WonFirstTeam()
-
-
+                state = BattleState.Success(secondTeam)
+                winningTeam = nameForSecondTeam
             }
-            secondTeam.isEmpty() -> {
+            secondTeam.size == 0 -> {
                 endBattle = true
-                BattleState.WonSecondTeam()
+                state = BattleState.Success(firstTeam)
 
             }
         }
     }
 
-    fun battleProgress(echipa1: MutableList<AbstractWarrior>, echipa2 : MutableList<AbstractWarrior>) {
-        val firstTeamUpdate = echipa1
-        val secondTeamUpdate = echipa2
-        for (i in 0..20) {
-            if (endBattle) println("the battle is over")
-            else {
-                val playerFirstTeam = firstTeamUpdate[Random.nextInt(0, firstTeamUpdate.size)]
-                val playerSecondTeam = secondTeamUpdate[Random.nextInt(0, secondTeamUpdate.size)]
-                if (!playerFirstTeam.isKilled)
-                    playerFirstTeam.attack(secondTeamUpdate[Random.nextInt(0, secondTeamUpdate.size)])
-                getStatusOfBattle(firstTeamUpdate,secondTeamUpdate)
-
-
-                if (!playerSecondTeam.isKilled)
-                    playerSecondTeam.attack(firstTeamUpdate[Random.nextInt(0, firstTeamUpdate.size)])
-                getStatusOfBattle(firstTeamUpdate,secondTeamUpdate)
-
+    fun checkBattleState() {
+        when (state) {
+            is BattleState.Progress -> {
+                println("Battle continue")
+            }
+            is BattleState.Success -> {
+                println("${winningTeam} Won")
 
             }
+            is BattleState.Draw -> {
+                println("Draw")
+            }
         }
-        BattleState.Progress().info(firstTeamUpdate,secondTeamUpdate)
+
     }
 
+    fun battleProgress(n: Int) {
+        removeKilledWarrior()
+        getStatusOfBattle()
+        println("Start the Battle of $nameForFirstTeam against $nameForSecondTeam")
+        for (i in 0..n) {
+            if (!endBattle) {
+                attack(getRandomWarrior(firstTeam), getRandomWarrior(secondTeam))
+                removeKilledWarrior()
+                getStatusOfBattle()
+                if (!endBattle) {
+                    attack(getRandomWarrior(secondTeam), getRandomWarrior(firstTeam))
+                }
+                removeKilledWarrior()
+                getStatusOfBattle()
+            }
+        }
+        checkBattleState()
+        println("The $nameForSecondTeam was left with ${secondTeam.size} warriors")
+        println("The $nameForFirstTeam was left with ${firstTeam.size} warriors")
+
+    }
+
+    fun attack(whoAttacks: AbstractWarrior, whoIsAttacked: AbstractWarrior) {
+        return whoAttacks.attack(whoIsAttacked)
+    }
+
+    fun getRandomWarrior(team: MutableList<AbstractWarrior>): AbstractWarrior {
+        return team[Random.nextInt(0, team.size)]
+
+
+    }     //Cleaning the list of Killed
+
+    fun removeKilledWarrior() {
+        firstTeam
+            .filter { it.currentHealthPoint <= 0 }
+            .forEach { firstTeam.remove(it) }
+
+        secondTeam
+            .filter { it.currentHealthPoint <= 0 }
+            .forEach { secondTeam.remove(it) }
+    }
+
+    fun battleInfo() {
+        BattleState.Progress.info(firstTeam, nameForFirstTeam, secondTeam, nameForSecondTeam)
+    }
 }

@@ -3,20 +3,21 @@ import Firetype.*
 object Weapons {
 
 
-    fun createSniperWeapon(): AbstractWeapon {
+  /*  fun createSniperWeapon(): AbstractWeapon {
         return object : AbstractWeapon(
-            32, AutomaticFire(8)
+            15, SingleShot
         ) {
             override fun createAmmoForWeapon(): Ammo {
                 return Ammo.sniperCartrige
             }
         }
     }
+   */
 
     fun createPistol(): AbstractWeapon {
         return object : AbstractWeapon(8, SingleShot) {
             override fun createAmmoForWeapon(): Ammo {
-                return Ammo.pistolCartrige
+                return Ammo.pistolAmmo
             }
 
         }
@@ -25,16 +26,16 @@ object Weapons {
     fun createAk47(): AbstractWeapon {
         return object : AbstractWeapon(30, Firetype.AutomaticFire(10)) {
             override fun createAmmoForWeapon(): Ammo {
-                return Ammo.assaultCartrige
+                return Ammo.assaultAmmo
             }
         }
 
     }
 
     fun createM39(): AbstractWeapon {
-        return object : AbstractWeapon(36, Firetype.AutomaticFire(12)) {
+        return object : AbstractWeapon(34, Firetype.AutomaticFire(12)) {
             override fun createAmmoForWeapon(): Ammo {
-                return Ammo.assaultCartrige
+                return Ammo.assaultAmmo
             }
         }
     }
