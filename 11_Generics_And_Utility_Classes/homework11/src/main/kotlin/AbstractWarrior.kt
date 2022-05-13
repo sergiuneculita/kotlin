@@ -13,9 +13,8 @@ abstract class AbstractWarrior : Warrior {
         if (weapon.isMagazineEmpty) {
             weapon.recharge()
         } else {
-            ammoForShot.forEach { _ ->
-                val probabilityDamage = accuracy.probability() && !enemy.chanceNotGetDamage.probability()
-                if (probabilityDamage) {
+            ammoForShot.forEach {
+                if (accuracy.probability() && !enemy.chanceNotGetDamage.probability()) {
                     enemy.takeDamage(currentDamage)
                 }
 

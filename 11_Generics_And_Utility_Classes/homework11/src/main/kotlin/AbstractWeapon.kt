@@ -13,8 +13,8 @@ abstract class AbstractWeapon(
 
      fun recharge() {
         val newMagazine: Stack<Ammo> = Stack()
-        for (i in 0 until maxAmmoMagazine) newMagazine.push(createAmmoForWeapon())
-        weaponMagazine = newMagazine
+        for (i in 0 until maxAmmoMagazine) {newMagazine.push(createAmmoForWeapon())
+        weaponMagazine = newMagazine}
 
     }
 
@@ -24,7 +24,7 @@ abstract class AbstractWeapon(
             is Firetype.SingleShot -> 1
             is Firetype.AutomaticFire -> fireType.fireSize
         }
-        for (i in 0 until ammoCount) ammoList.add(weaponMagazine.pop() ?: break)
+        for (i in 0 until ammoCount){ ammoList.add(weaponMagazine.pop() ?: break)}
 
         return ammoList
 
