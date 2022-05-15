@@ -1,2 +1,2 @@
-class TooHightPressure {
+class TooHighPressure : Throwable(){
 }

@@ -1,2 +1,2 @@
-class IncorrectPressure {
+class IncorrectPressure:Throwable() {
 }
