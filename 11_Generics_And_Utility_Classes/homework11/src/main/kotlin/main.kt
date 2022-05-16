@@ -16,13 +16,11 @@ fun main() {
         return newTeam
     }
 
-    val daciiTeam = createTeam()
+   val daciiTeam = createTeam()
     val vikingTeam = createTeam()
     val battle1 = Battle("DACII", daciiTeam, "VIKING", vikingTeam)
     battle1.battleInfo()
     battle1.battleProgress(200)
-
-
 
 }
 
