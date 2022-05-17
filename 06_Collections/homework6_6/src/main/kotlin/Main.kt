@@ -14,7 +14,7 @@ fun main() {
     val uniqueNumber = correctFormat.toSet()
     println("The Quantity of correct phone numbers is ${uniqueNumber.size}")
     val lengthNumber = phonesList.sumOf { it.length }
-    println("The length all symbols in the phone numbers list is $lengthNumber")
+    println(" The length all symbols in the phone numbers list is $lengthNumber")
 
     phoneBook(phonesList)
 
