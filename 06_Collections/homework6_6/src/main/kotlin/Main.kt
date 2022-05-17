@@ -2,7 +2,7 @@ fun main() {
     println("How many phone numbers do you want to add?")
     var n = readLine()?.toIntOrNull() ?: return
     while (n <= 0) {
-        println("The number must be greater than zero, please enter again  ")
+        println(" The number must be greater than zero, please enter again  ")
         (readLine()?.toIntOrNull() ?: return).also { n = it }
     }
     println("Please add $n phone numbers")
