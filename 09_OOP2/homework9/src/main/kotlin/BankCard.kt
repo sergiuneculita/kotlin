@@ -6,7 +6,7 @@ abstract class BankCard() {
     open var checkPay = false
     open fun addFunds() : Boolean{
         checkAddFund = false
-        println(" How much money you want to add to the card? :")
+        println(" How  much money you want to add to the card? :")
         val addedFunds =  readLine()?.toIntOrNull()
         if (addedFunds != null) {
             if (addedFunds > 0) {
