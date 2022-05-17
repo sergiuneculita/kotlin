@@ -9,9 +9,9 @@ fun main(){
 
     var info = """First name is $firstName ,
         | Last name is $lastName 
-        |Sergiu Height - $height m
-        |Sergiu Weight - $weight kg
-        |Is Sergiu a Child ? - $isChild
+        | Sergiu Height - $height m
+        | Sergiu Weight - $weight kg
+        | Is Sergiu a Child ? - $isChild
     """.trimMargin()
 
     println(info)
