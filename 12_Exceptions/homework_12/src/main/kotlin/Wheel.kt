@@ -4,7 +4,7 @@ class Wheel {
     fun pumpUpTheWheel(pumpedUpPressure: Double) {
         currentPressure += pumpedUpPressure
         val exception = runCatching { checkPressure() }
-        println("After pumping $pumpedUpPressure atmospheres")
+        println(" After pumping $pumpedUpPressure atmospheres")
         if (exception.isFailure) {
             when (exception.exceptionOrNull()) {
                 is IncorrectPressure -> {
