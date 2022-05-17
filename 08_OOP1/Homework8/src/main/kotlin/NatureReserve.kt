@@ -14,7 +14,7 @@ class NatureReserve() {
     )
 
     fun animalLife(n: Int) {
-        println(" There are ${animalList.size} animals in the reserve")
+        println("There are ${animalList.size} animals in the reserve")
         for (i in 1..n) {
             if (animalList.size == 0) {
                 println("no more animals in the reserve")
