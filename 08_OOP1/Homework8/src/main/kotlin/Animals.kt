@@ -17,7 +17,7 @@ open class Animals(
 
     fun sleep() {
         if (istooOld) {
-            println("$name is too old to sleep")
+            println("$name is  too old to sleep")
         } else {
             energy += 5
             currentAge += 1
