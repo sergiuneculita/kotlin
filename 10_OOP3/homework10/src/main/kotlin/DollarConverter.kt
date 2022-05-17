@@ -2,7 +2,7 @@ class DollarConverter : CurrencyConverter {
     override val currencyCode = "USD"
     private val exchangeRate = 82.68
     override fun convertToRub() {
-        println("How many rubles you want to exchange to $currencyCode")
+        println(" How many rubles you want to exchange to $currencyCode")
         val nRub = readLine()?.toIntOrNull()
         if (nRub != null) getResultCurrency(nRub)
         else {
