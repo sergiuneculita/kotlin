@@ -12,7 +12,7 @@ fun main() {
     val correctFormat = phonesList.filter { it.startsWith("+7") }
     println("Number with prefix +7 are: $correctFormat")
     val uniqueNumber = correctFormat.toSet()
-    println("The Quantity of correct phone numbers is ${uniqueNumber.size}")
+    println(" The Quantity of correct phone numbers is ${uniqueNumber.size}")
     val lengthNumber = phonesList.sumOf { it.length }
     println(" The length all symbols in the phone numbers list is $lengthNumber")
 
