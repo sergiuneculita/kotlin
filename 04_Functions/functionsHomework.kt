@@ -17,7 +17,7 @@ fun main() {
 fun decodeText1(firstPart : String): String {
     val decode2_5 = shift(firstPart, {it + 1})//firstPart.map { char -> char + 1 }.joinToString("")
 
-    val decode2_4 = decode2_5.replace('5', 's')
+    val decode2_4 = decode2_5.replace(' 5', 's')
     val decode2_3 =decode2_4.replace(oldChar = '4', newChar = 'u')
     val decode2_2 = shift(decode2_3, {it - 3})
     val decode2_1 = decode2_2.replace(newChar = 'o', oldChar =  '0' )
