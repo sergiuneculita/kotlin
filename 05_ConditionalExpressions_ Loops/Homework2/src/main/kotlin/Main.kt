@@ -1,7 +1,7 @@
 fun main(){
     Check() }
 fun Check(){
-    println("Enter the number: ")
+    println(" Enter the number: ")
     val n: Long = readLine()?.toLongOrNull()?:return
     return if (n <= 0){
         println("The number is not part of the Fibonacci sequence")

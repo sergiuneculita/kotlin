@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b2fae6e-6a7b-408e-896e-63d63a0316c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../probe/src/main/kotlin/Main.kt" beforeDir="false" />
-    </list>
+    <list default="true" id="6b2fae6e-6a7b-408e-896e-63d63a0316c2" name="Changes" comment="The homework 4 is ready" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +34,29 @@
       <option name="presentableId" value="Default" />
       <updated>1643486697984</updated>
     </task>
+    <task id="LOCAL-00001" summary="The homework 4 is ready">
+      <created>1652774283517</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652774283517</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="The homework 4 is ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="The homework 4 is ready" />
   </component>
 </project>
