@@ -9,7 +9,7 @@ class TV(val brand: String, val model: String, val diagonal: Int) {
      fun switchOnOff(isTvOn: Boolean) {
         isOn = isTvOn
         if (isOn) println(" Switched On")
-        else println(" Switched Off")
+        else println("  Switched Off")
     }
 
     private val chanelList = getRandomChannels().toMap()
