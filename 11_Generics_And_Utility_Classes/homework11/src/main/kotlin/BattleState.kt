@@ -7,7 +7,7 @@ sealed class BattleState {
             nameOfSecondTeam: String
         ) {
             println(
-                "Sum of $nameOfFirstTeam team health ${firstTeam.sumOf { it.currentHealthPoint }},\n" +
+                " Sum of $nameOfFirstTeam team health ${firstTeam.sumOf { it.currentHealthPoint }},\n" +
                         " Sum of $nameOfSecondTeam team health ${secondTeam.sumOf { it.currentHealthPoint }}"
             )
             println(
