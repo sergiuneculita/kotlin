@@ -4,7 +4,6 @@ fun main() {
     val text = "F2p)v\"y233{0->c}ttelciFc"
     //println(text.count()) // control sum
     val text1 = text.take(12)  //"""F2p)v"y233{0"""
-    //println(text1) //control first part
      val text2 = text.takeLast(12)
 
     val textComplet = decodeText1(text1)+decodeText2(text2)
